@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="address" class="com.zb.pojo.Address"/>
+    <bean id="student" class="com.zb.pojo.Student">
+        <!--普通注入-->
+        <property name="name" value="张三"></property>
+
+        <!--Bean注入,ref-->
+        <property name="address" ref="address"></property>
+
+        <!--数据注入-->
+        <property name="books">
+            <array>
+                <value>西游记</value>
+                <value>红楼梦</value>
+                <value>水浒传</value>
+                <value>三国演义</value>
+            </array>
+        </property>
+
+        <!--list注入-->
+        <property name="hobbys">
+            <list>
+                <value>篮球</value>
+                <value>足球</value>
+                <value>游泳</value>
+            </list>
+        </property>
+
+        <!--map注入-->
+        <property name="card">
+            <map>
+                <entry key="姓名" value="张三"></entry>
+                <entry key="手机号" value="111111111"></entry>
+            </map>
+        </property>
+
+        <!--set注入-->
+        <property name="games">
+            <set>
+                <value>lol</value>
+                <value>qq飞车</value>
+                <value>qq飞车</value>
+            </set>
+        </property>
+
+        <!--null注入-->
+        <property name="wife">
+            <null></null>
+        </property>
+
+        <!--properties-->
+        <property name="info">
+            <props>
+                <prop key="学号">2022101</prop>
+                <prop key="姓名">张三</prop>
+                <prop key="性别">男</prop>
+            </props>
+        </property>
+     </bean>
+
+
+</beans>

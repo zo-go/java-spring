@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Spring05-AutoWried" />
+        <module name="spring04-di" />
+        <module name="Spring06-anno" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="11">
+      <module name="spring04-di" target="1.5" />
+      <module name="Spring05-AutoWried" target="11" />
+      <module name="Spring06-anno" target="11" />
+      <module name="src" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
